@@ -1,0 +1,66 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "pontini.systems"
+        minSdkVersion 24
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.anko:anko:$anko_version"
+    implementation 'androidx.appcompat:appcompat'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0-beta01'
+    implementation 'com.google.android.material:material:1.0.0-beta01'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
+    implementation "android.arch.lifecycle:extensions:${rootProject.lifecycleextensionsVersion}"
+    kapt "android.arch.lifecycle:compiler:${rootProject.lifecyclecompilerVersion}"
+    implementation "io.reactivex.rxjava2:rxjava:${rootProject.rxjava2Version}"
+    implementation "io.reactivex.rxjava2:rxandroid:${rootProject.rxandroidVersion}"
+    implementation "android.arch.persistence.room:runtime:${rootProject.roomruntimeVersion}"
+    kapt "android.arch.persistence.room:compiler:${rootProject.roomcompilerVersion}"
+    implementation "android.arch.persistence.room:rxjava2:${rootProject.roomrxjava2Version}"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.1.0'
+
+    // Required -- JUnit 4 framework
+    testImplementation "junit:junit:${rootProject.jUnit}"
+
+    // Optional -- Mockito framework
+    testImplementation "org.mockito:mockito-core:${rootProject.mockito}"
+    testImplementation "org.mockito:mockito-inline:$rootProject.mockito"
+    testImplementation 'com.nhaarman.mockitokotlin2:mockito-kotlin:2.0.0-RC1'
+    testImplementation 'org.awaitility:awaitility:3.1.2'
+    androidTestImplementation "org.mockito:mockito-android:${rootProject.mockito}"
+    testImplementation "org.robolectric:shadows-httpclient:${rootProject.roboEletric}"
+    testImplementation "org.robolectric:robolectric:${rootProject.roboEletric}"
+    testImplementation "android.arch.core:core-testing:${rootProject.lifecycleextensionsVersion}"
+    testImplementation "android.arch.persistence.room:testing:${rootProject.roomcompilerVersion}"
+    testImplementation "com.android.support:support-annotations:${rootProject.support_annotations}"
+    testImplementation "com.android.support.test:runner:${rootProject.support_test}"
+    testImplementation "com.android.support.test:rules:${rootProject.support_test}"
+    testImplementation "org.hamcrest:hamcrest-library:${rootProject.hamcrest}"
+    testImplementation "org.assertj:assertj-core:${rootProject.assertj}"
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    testImplementation "org.robolectric:robolectric:4.0.2"
+}
+
+
+

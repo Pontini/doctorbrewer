@@ -1,0 +1,58 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.3.21'
+    ext.anko_version = '0.10.8'
+    repositories {
+        google()
+        jcenter()
+        
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.3.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://maven.google.com' }
+        
+    }
+}
+
+ext {
+    playservicesmapsVersion = "11.6.0"
+    firebaseVersion = "11.6.0"
+    mpandroidchartVersion = "v3.0.2"
+    jodatimeVersion = "2.9.4"
+    picassotransformationsVersion = "2.1.2"
+    constraintlayoutVersion = "1.0.2"
+    pagingruntimeVersion = "1.0.1"
+    roomruntimeVersion = "1.1.1"
+    roomcompilerVersion = "1.1.0-rc1"
+    roomrxjava2Version = "1.0.0"
+    rxjava2Version = "2.0.6"
+    rxandroidVersion = "2.0.1"
+    lifecycleextensionsVersion = "1.1.1"
+    lifecyclecompilerVersion = "1.1.1"
+
+    //TESTES
+    roboEletric = "3.8"
+    jUnit = "4.12"
+    mockito = "2.21.0"
+    support_annotations = "27.1.1"
+    support_test = "1.0.2"
+    hamcrest = "1.3"
+    assertj = "2.5.0"
+    coroutines ="1.3.0"
+
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

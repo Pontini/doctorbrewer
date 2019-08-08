@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:background="@android:color/white">
+    <include layout="@layout/dlg_progress"/>
+
+    <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <include layout="@layout/appbar_scroll_details_mash"/>
+
+
+            <include layout="@layout/recycler"/>
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+    <include layout="@layout/fab"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

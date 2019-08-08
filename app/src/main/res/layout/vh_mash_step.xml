@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="8dp">
+
+
+        <TextView
+            android:id="@+id/vh_mash_step__tv__name"
+            style="@style/list_text_primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Infusion" />
+
+
+        <TextView
+            android:id="@+id/vh_mash_step__tv__temperature"
+            style="@style/list_text_secundary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/vh_mash_step__tv__name"
+            tools:text="65C" />
+
+        <TextView
+            android:id="@+id/vh_ingredient__tv__separator"
+            style="@style/list_text_secundary"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_below="@id/vh_mash_step__tv__name"
+            android:layout_toRightOf="@id/vh_mash_step__tv__temperature"
+            android:text=" - " />
+
+        <TextView
+            android:id="@+id/vh_mash_step__tv__time"
+            style="@style/list_text_secundary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/vh_mash_step__tv__name"
+            android:layout_toRightOf="@id/vh_ingredient__tv__separator"
+            tools:text="1H:300min" />
+    </RelativeLayout>
+
+        <include layout="@layout/divider" />
+</LinearLayout>

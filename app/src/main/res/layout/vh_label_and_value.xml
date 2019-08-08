@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="4dp"
+    android:paddingTop="4dp"
+    >
+
+    <TextView
+        android:id="@+id/vh_label_and_value_tv_value"
+        style="@style/list_text_primary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Liquid"
+        tools:text="Liquid" />
+
+    <TextView
+        android:id="@+id/vh_label_and_value_tv_label"
+        style="@style/list_text_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Form"
+        tools:text="Form" />
+
+</LinearLayout>
+
+
+                    
